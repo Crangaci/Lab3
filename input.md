@@ -11,17 +11,21 @@ baza de date
 <img src="./4znxkl5s.png"
 style="width:300px; height: 200px;" />
 
-**Sarcina** **nr.2.** **Crearea** **modelelor** **și** **migrațiilor**
+# **Sarcina** **nr.2.** **Crearea** **modelelor** **și** **migrațiilor**
 
+Am creat modelul Category
 <img src="./ecczlx0g.png"
-style="width:3.84375in;height:0.79167in" /><img src="./mortfwtg.png"
-style="width:3.83333in;height:2.19792in" />Am creat modelul Category
-
-<img src="./qs1fvl0j.png"
-style="width:4.11458in;height:0.71875in" /><img src="./dgeg3o33.png"
-style="width:4.15625in;height:2.32292in" />
+style="width:300px; height: 200px;" />
+<img src="./mortfwtg.png"
+style="width:300px; height: 200px;" />
 
 Am creat modelul Task
+<img src="./qs1fvl0j.png"
+style="width:4.11458in;height:0.71875in" />
+<img src="./dgeg3o33.png"
+style="width:4.15625in;height:2.32292in" />
+
+
 
 <img src="./ztrxp240.png"
 style="width:4.125in;height:0.71875in" /><img src="./qjnw5lw1.png"
