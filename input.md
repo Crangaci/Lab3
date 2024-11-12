@@ -15,9 +15,9 @@ style="width:300px; height: 200px;" />
 
 Am creat modelul Category
 <img src="./ecczlx0g.png"
-style="width:300px; height:auto; display:block"/>
+style="width:300px; height:auto; "/>
 <img src="./mortfwtg.png"
-style="width:300px; height: 200px;" />
+style="width:300px; height: 0.71875in" />
 
 Am creat modelul Task
 <img src="./qs1fvl0j.png"
