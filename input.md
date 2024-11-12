@@ -4,7 +4,7 @@
 Am instalat MySQL , si am creat o baza de date pentru aplicatia mea
 todo-app
 
-CREATE DATABASE todo_app;
+```CREATE DATABASE todo_app;```
 
 Am configurat variabilele de mediu in fisierul .env ca sa ma conectez la
 baza de date
