@@ -15,7 +15,7 @@ style="width:300px; height: 200px;" />
 
 Am creat modelul Category
 <img src="./ecczlx0g.png"
-style="width:300px; height: auto;" />
+style="width:300px; height: auto; display: block; margin-left: 0;" />
 <img src="./mortfwtg.png"
 style="width:300px; height: 200px;" />
 
