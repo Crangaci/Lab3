@@ -1,5 +1,3 @@
-<img src="./4znxkl5s.png"
-style="width:3.79167in;height:1.96875in" />
 
 **Sarcina** **nr.1.** **Pregătirea** **pentru** **lucru**
 
@@ -10,6 +8,8 @@ CREATE DATABASE todo_app;
 
 Am configurat variabilele de mediu in fisierul .env ca sa ma conectez la
 baza de date
+<img src="./4znxkl5s.png"
+style="width:3.79167in;height:1.96875in" />
 
 **Sarcina** **nr.2.** **Crearea** **modelelor** **și** **migrațiilor**
 
