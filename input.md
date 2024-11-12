@@ -1,5 +1,5 @@
 
-#**Sarcina** **nr.1.** **Pregătirea** **pentru** **lucru**
+# **Sarcina** **nr.1.** **Pregătirea** **pentru** **lucru**
 
 Am instalat MySQL , si am creat o baza de date pentru aplicatia mea
 todo-app
