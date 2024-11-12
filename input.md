@@ -9,7 +9,7 @@ todo-app
 Am configurat variabilele de mediu in fisierul .env ca sa ma conectez la
 baza de date
 <img src="./4znxkl5s.png"
-style="width:150px;" />
+style="width:300px; height: 200px;" />
 
 **Sarcina** **nr.2.** **Crearea** **modelelor** **și** **migrațiilor**
 
