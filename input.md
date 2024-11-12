@@ -9,95 +9,92 @@ todo-app
 Am configurat variabilele de mediu in fisierul .env ca sa ma conectez la
 baza de date
 <img src="./4znxkl5s.png"
-style="width:300px; height: 200px;" />
+style="width:3.9375in;height:1.35417in" />
 
 # **Sarcina** **nr.2.** **Crearea** **modelelor** **și** **migrațiilor**
 
 Am creat modelul Category
 <img src="./ecczlx0g.png"
-style="width:300px; height:auto; "/>
+style="width:4.11458in;height:0.71875in"/>
 <img src="./mortfwtg.png"
-style="width:300px; height: 0.71875in" />
+style="width:3.9375in;height:1.35417in" />
 
 Am creat modelul Task
 <img src="./qs1fvl0j.png"
 style="width:4.11458in;height:0.71875in" />
 <img src="./dgeg3o33.png"
-style="width:4.15625in;height:2.32292in" />
+style="width:3.9375in;height:1.35417in"  />
 
-
-
+Am creat modelul Tags
 <img src="./ztrxp240.png"
-style="width:4.125in;height:0.71875in" /><img src="./qjnw5lw1.png"
-style="width:4.09375in;height:2.29167in" />Am creat modelul Tags
+style="width:4.125in;height:0.71875in" />
+<img src="./qjnw5lw1.png"
+style="width:3.9375in;height:1.35417in"  />
 
+Am adaugat \$fillable in Task, Category si Tagca sa se permita atribuirea in masa a datelor app/Models/Task.php
 <img src="./aca4evhk.png"
-style="width:3.89583in;height:1.41667in" /><img src="./skp1cehz.png"
-style="width:3.9375in;height:1.35417in" /><img src="./cndvnzp0.png"
-style="width:3.94792in;height:1.36458in" />
-
-Am adaugat \$fillable in Task, Category si Tagca sa se permita
-atribuirea in masa a datelor
-
-app/Models/Task.php
+style="width:3.9375in;height:1.35417in"/>
 
 app/Models/Category.php
+<img src="./skp1cehz.png"
+style="width:3.9375in;height:1.35417in" />
 
 app/Models/Tag.php
+<img src="./cndvnzp0.png"
+style="width:3.94792in;height:1.36458in" />
 
+Pentru ca am creat modelele si migratiile pentru toate tabelele , am rulat migrarea pentru a crea tabelele in baza de date
 <img src="./iaptvuuc.png"
-style="width:4.04167in;height:1.64583in" />Pentru ca am creat modelele
-si migratiile pentru toate tabelele , am rulat migrarea pentru a crea
-tabelele in baza de date
+style="width:4.04167in;height:1.64583in" />
 
-<img src="./w2cnahft.png"
-style="width:3.88542in;height:0.58333in" /><img src="./fqhbuuzz.png"
-style="width:3.97917in;height:2.61458in" /><img src="./rmzgjdxr.png"
-style="width:4.01042in;height:1.78125in" />
-
-**Sarcina** **nr.3.** **Relația** **dintre** **tabele**
+# **Sarcina** **nr.3.** **Relația** **dintre** **tabele**
 
 Am creat o migrare pentru a adauga cimpul category_id in tabela task
+<img src="./w2cnahft.png"
+style="width:3.88542in;height:0.58333in" />
 
 Am definit structura cimpului category_idsi am adaugat cheia externa
 pentru a face legatura cu tabela
+<img src="./fqhbuuzz.png"
+style="width:3.97917in;height:2.61458in" />
 
-In modelul Categoryam adaugat relatia cu Task
+In modelul Category am adaugat relatia cu Task
+<img src="./rmzgjdxr.png"
+style="width:4.01042in;height:1.78125in" />
 
+In modelul Task am adaugat relatia cu Category
 <img src="./yvyvjehn.png"
-style="width:3.96875in;height:1.92708in" />In modelul Taskam adaugat
-relatia cu Category
+style="width:3.96875in;height:1.92708in" />
 
-<img src="./rppklvj1.png" style="width:4.125in;height:1.375in" /><img src="./12vzgwqk.png"
-style="width:4.38542in;height:2.19792in" /><img src="./bzav1r5d.png"
-style="width:4.375in;height:0.67708in" /><img src="./qjaxxz0o.png"
-style="width:4.5625in;height:2.21875in" />
-
-Am rulat migratia , ca sa se creeze tabela task_tagin baza de date
+Am rulat migratia , ca sa se creeze tabela task_tag in baza de date
+<img src="./rppklvj1.png" style="width:4.125in;height:1.375in" />
 
 Am definit migratia pentru task_tag
+<img src="./12vzgwqk.png"
+style="width:4.38542in;height:2.19792in" />
 
 Dupa ce am editat migrarea ,am rulat comanda ca sa creez tabela task_tag
+<img src="./bzav1r5d.png"
+style="width:4.375in;height:0.67708in" />
 
-**Sarcina** **nr.4.** **Relația** **dintre** **modele**
+# **Sarcina** **nr.4.** **Relația** **dintre** **modele**
 
 Am adaugat relatia in modelul Category
-
+<img src="./qjaxxz0o.png"
+style="width:4.5625in;height:2.21875in" />
 **tasks()**: Metoda hasMany defineste relatia "one-to-many"
 (unu-la-multe), o categorie poate avea multe sarcini
 
-<img src="./mbja24n1.png"
-style="width:4.36458in;height:2.125in" /><img src="./fdvsnzkt.png"
-style="width:4.23958in;height:2.05208in" />
-
 Am adaugat relatia in modelul Tag
-
+<img src="./mbja24n1.png"
+style="width:4.36458in;height:2.125in" />
 **tasks()**: Metoda belongsToMany defineste relatia **"Many-to-Many"**
 între Tag și Task, o eticheta poate fi asociata cu multe sarcini, iar
 fiecare sarcina poate avea multe etichete.
 
 Am adaugat relatia in modelul Task
-
+<img src="./fdvsnzkt.png"
+style="width:4.23958in;height:2.05208in" />
 **category()**: Metoda belongsTo definesc relatia de tip
 **"Many-to-One"**, asta înseamna ca fiecare sarcina va avea o categorie
 asociata.
@@ -113,67 +110,72 @@ atribuite în masa. Asta inseamna ca atunci cind creez sau actualizez o
 instanta a unui model, Laravel va permite atribuirea valorilor doar
 pentru câmpurile specificate în \$fillable.
 
-**Sarcina** **nr.5.** **Crearea** **fabricilor** **si** **seed-urilor**
+# **Sarcina** **nr.5.** **Crearea** **fabricilor** **si** **seed-urilor**
 
+Am creat o fabrica pentru modelul Category
 <img src="./ar2teuuq.png"
-style="width:4.23958in;height:0.65625in" />Am creat o fabrica pentru
-modelul Category
-
-<img src="./cfrrf4j4.png"
-style="width:4.125in;height:1.83333in" /><img src="./kseu2yos.png"
-style="width:4.20833in;height:0.6875in" /><img src="./s5kwwsdi.png"
-style="width:4.21875in;height:2.125in" /><img src="./0pcr44v3.png"
-style="width:3.53125in;height:0.48958in" />
+style="width:4.23958in;height:0.65625in" />
 
 database/factories/CategoryFactory.php
+<img src="./cfrrf4j4.png"
+style="width:4.125in;height:1.83333in" />
 
 Am creat o fabrica pentru modelul Task
+<img src="./kseu2yos.png"
+style="width:4.20833in;height:0.6875in" />
 
 database/factories/TaskFactory.php
+<img src="./s5kwwsdi.png"
+style="width:4.21875in;height:2.125in" />
 
 Am creat o fabrica pentru modelul Tag
+<img src="./0pcr44v3.png"
+style="width:3.53125in;height:0.48958in" />
 
+database/factories/TagFactory.php 
 <img src="./v01wuhlg.png"
-style="width:3.66667in;height:1.57292in" />database/factories/TagFactory.php
-
-<img src="./oh4fxa1i.png"
-style="width:4.07292in;height:0.42708in" /><img src="./xgg02a5r.png"
-style="width:4.03125in;height:1.54167in" /><img src="./vy5hlsew.png" style="width:4.25in;height:0.45833in" /><img src="./lah5flej.png"
-style="width:4.10417in;height:1.53125in" /><img src="./hpk5xsm5.png"
-style="width:3.94792in;height:0.42708in" />
+style="width:3.66667in;height:1.57292in" />
 
 Am creat seed-uri pentru a popula tabelele cu date initiale pentru
 modelul Category
+<img src="./oh4fxa1i.png"
+style="width:4.07292in;height:0.42708in" />
 
 database/seeders/CategorySeeder.php
+<img src="./xgg02a5r.png"
+style="width:4.03125in;height:1.54167in" />
 
 Am creat seed-uri pentru a popula tabelele cu date initiale pentru
 modelul Task
+<img src="./vy5hlsew.png" 
+  style="width:4.25in;height:0.45833in" />
 
 database/seeders/TaskSeeder.php
+<img src="./lah5flej.png"
+style="width:4.10417in;height:1.53125in" />
 
-Am creat seed-uri pentru a popula tabelele cu date initiale pentru
-modelul Tag
+Am creat seed-uri pentru a popula tabelele cu date initiale pentru modelul Tag
+<img src="./hpk5xsm5.png"
+style="width:3.94792in;height:0.42708in" />
 
+database/seeders/TagSeeder.php
 <img src="./3fhoraox.png"
-style="width:3.88542in;height:1.44792in" />database/seeders/TagSeeder.php
-
-<img src="./ojmqpbap.png"
-style="width:3.29167in;height:1.40625in" />
+style="width:3.88542in;height:1.44792in" />
 
 Am actulizat fisierul DatabaseSeeder.php ca sa se lanseze seed-urile
 create
-
 database/seeders/DatabaseSeeder.php
+<img src="./ojmqpbap.png"
+style="width:3.29167in;height:1.40625in" />
 
-**Sarcina** **nr.6.** **Lucrul** **cu** **controlere** **și**
+# **Sarcina** **nr.6.** **Lucrul** **cu** **controlere** **și**
 **vizualizări**
 
+Am deschis fisierul app/Http/Controllers/TaskController.php
 <img src="./ta0qxxgc.png"
-style="width:3.66667in;height:2.38542in" /><img src="./li15hbn5.png"
-style="width:3.6875in;height:2.15625in" />Am deschis fisierul
-app/Http/Controllers/TaskController.php
-
+style="width:3.66667in;height:2.38542in" />
+<img src="./li15hbn5.png"
+style="width:3.6875in;height:2.15625in" />
 <img src="./u0hc3u2z.png"
 style="width:3.90625in;height:2.51042in" />
 
@@ -211,27 +213,28 @@ selectate.
 
 Sterge o sarcina din baza de date.
 
-<img src="./dbtcaddf.png"
-style="width:3.85417in;height:1.66667in" /><img src="./weijpbrh.png"
-style="width:3.89583in;height:1.70833in" />
-
 Am deschis fisierul resources/views/tasks/index.blade.php
+<img src="./dbtcaddf.png"
+style="width:3.85417in;height:1.66667in" />
 
 Am deschis fisierul resources/views/tasks/show.blade.php
+<img src="./weijpbrh.png"
+style="width:3.89583in;height:1.70833in" />
 
+Am deschis fisierul resources/views/tasks/create.blade.php
 <img src="./co4wjm34.png"
-style="width:4.02083in;height:2.54167in" />Am deschis fisierul
-resources/views/tasks/create.blade.php
-
-<img src="./ic5luull.png"
-style="width:4.16667in;height:3.20833in" /><img src="./xaz0nqtx.png"
-style="width:4.20833in;height:1.80208in" />
+style="width:4.02083in;height:2.54167in" />
 
 Am deschis fisierul resources/views/tasks/edit.blade.php
+<img src="./ic5luull.png"
+style="width:4.16667in;height:3.20833in" />
 
 Am deschis fisierul routes/web.php
+<img src="./xaz0nqtx.png"
+style="width:4.20833in;height:1.80208in" />
 
-**Sarcini** **suplimentare**
+
+## **Sarcini** **suplimentare**
 
 **1.** **Ce** **sunt** **migratiile** **si** **la** **ce** **se**
 **folosesc?**
