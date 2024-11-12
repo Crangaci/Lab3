@@ -1,45 +1,43 @@
 
 # **Sarcina** **nr.1.** **Pregătirea** **pentru** **lucru**
 
-Am instalat MySQL , si am creat o baza de date pentru aplicatia mea
-todo-app
+Am instalat MySQL , si am creat o baza de date pentru aplicatia mea todo-app
 
 ```CREATE DATABASE todo_app;```
 
-Am configurat variabilele de mediu in fisierul .env ca sa ma conectez la
-baza de date
+Am configurat variabilele de mediu in fisierul ```.env``` ca sa ma conectez la baza de date
 <img src="./4znxkl5s.png"
 style="width:3.9375in;height:1.35417in" />
 
 # **Sarcina** **nr.2.** **Crearea** **modelelor** **și** **migrațiilor**
 
-Am creat modelul Category
+Am creat modelul ```Category```
 <img src="./ecczlx0g.png"
 style="width:4.11458in;height:0.71875in"/>
 <img src="./mortfwtg.png"
 style="width:3.9375in;height:1.35417in" />
 
-Am creat modelul Task
+Am creat modelul ```Task```
 <img src="./qs1fvl0j.png"
 style="width:4.11458in;height:0.71875in" />
 <img src="./dgeg3o33.png"
 style="width:3.9375in;height:1.35417in"  />
 
-Am creat modelul Tags
+Am creat modelul ```Tags```
 <img src="./ztrxp240.png"
 style="width:4.125in;height:0.71875in" />
 <img src="./qjnw5lw1.png"
 style="width:3.9375in;height:1.35417in"  />
 
-Am adaugat \$fillable in Task, Category si Tagca sa se permita atribuirea in masa a datelor app/Models/Task.php
+Am adaugat ```\$fillable``` in ```Task```, ```Category ```si ```Tag ```ca sa se permita atribuirea in masa a datelor ```app/Models/Task.php```
 <img src="./aca4evhk.png"
 style="width:3.9375in;height:1.35417in"/>
 
-app/Models/Category.php
+```app/Models/Category.php```
 <img src="./skp1cehz.png"
 style="width:3.9375in;height:1.35417in" />
 
-app/Models/Tag.php
+```app/Models/Tag.php```
 <img src="./cndvnzp0.png"
 style="width:3.94792in;height:1.36458in" />
 
@@ -49,129 +47,127 @@ style="width:4.04167in;height:1.64583in" />
 
 # **Sarcina** **nr.3.** **Relația** **dintre** **tabele**
 
-Am creat o migrare pentru a adauga cimpul category_id in tabela task
+Am creat o migrare pentru a adauga cimpul ```category_id``` in tabela ```task```
 <img src="./w2cnahft.png"
 style="width:3.88542in;height:0.58333in" />
 
-Am definit structura cimpului category_idsi am adaugat cheia externa
-pentru a face legatura cu tabela
+Am definit structura cimpului ```category_id``` si am adaugat cheia externa pentru a face legatura cu tabela
 <img src="./fqhbuuzz.png"
 style="width:3.97917in;height:2.61458in" />
 
-In modelul Category am adaugat relatia cu Task
+In modelul ```Category``` am adaugat relatia cu ```Task```
 <img src="./rmzgjdxr.png"
 style="width:4.01042in;height:1.78125in" />
 
-In modelul Task am adaugat relatia cu Category
+In modelul ```Task``` am adaugat relatia cu ```Category```
 <img src="./yvyvjehn.png"
 style="width:3.96875in;height:1.92708in" />
 
-Am rulat migratia , ca sa se creeze tabela task_tag in baza de date
+Am rulat migratia , ca sa se creeze tabela ```task_tag``` in baza de date
 <img src="./rppklvj1.png" style="width:4.125in;height:1.375in" />
 
-Am definit migratia pentru task_tag
+Am definit migratia pentru ```task_tag```
 <img src="./12vzgwqk.png"
 style="width:4.38542in;height:2.19792in" />
 
-Dupa ce am editat migrarea ,am rulat comanda ca sa creez tabela task_tag
+Dupa ce am editat migrarea ,am rulat comanda ca sa creez tabela ```task_tag```
 <img src="./bzav1r5d.png"
 style="width:4.375in;height:0.67708in" />
 
 # **Sarcina** **nr.4.** **Relația** **dintre** **modele**
 
-Am adaugat relatia in modelul Category
+Am adaugat relatia in modelul ```Category```
 <img src="./qjaxxz0o.png"
 style="width:4.5625in;height:2.21875in" />
-**tasks()**: Metoda hasMany defineste relatia "one-to-many"
+**tasks()**: Metoda ```hasMany``` defineste relatia "one-to-many"
 (unu-la-multe), o categorie poate avea multe sarcini
 
-Am adaugat relatia in modelul Tag
+Am adaugat relatia in modelul ```Tag```
 <img src="./mbja24n1.png"
 style="width:4.36458in;height:2.125in" />
-**tasks()**: Metoda belongsToMany defineste relatia **"Many-to-Many"**
+**tasks()**: Metoda ```belongsToMany``` defineste relatia **"Many-to-Many"**
 între Tag și Task, o eticheta poate fi asociata cu multe sarcini, iar
 fiecare sarcina poate avea multe etichete.
 
-Am adaugat relatia in modelul Task
+Am adaugat relatia in modelul ```Task```
 <img src="./fdvsnzkt.png"
 style="width:4.23958in;height:2.05208in" />
-**category()**: Metoda belongsTo definesc relatia de tip
+**category()**: Metoda ```belongsTo``` definesc relatia de tip
 **"Many-to-One"**, asta înseamna ca fiecare sarcina va avea o categorie
 asociata.
 
-**tags()**: Metoda belongsToMany defineste relatia de tip
+**tags()**: Metoda ```belongsToMany``` defineste relatia de tip
 **"Many-to-Many"** intre Task și Tag, o sarcina poate avea multe
 etichete, iar o eticheta poate fi legata de multe sarcini.
 
-Am adaugat cimpurile corespunzatoare in \$fillable ale modelelor
+Am adaugat cimpurile corespunzatoare in ```\$fillable``` ale modelelor
 
-Câmpul \$fillable este utilizat pentru a specifica ce cimpuri pot fi
+Câmpul ```\$fillable``` este utilizat pentru a specifica ce cimpuri pot fi
 atribuite în masa. Asta inseamna ca atunci cind creez sau actualizez o
 instanta a unui model, Laravel va permite atribuirea valorilor doar
-pentru câmpurile specificate în \$fillable.
+pentru câmpurile specificate în ```\$fillable.```
 
 # **Sarcina** **nr.5.** **Crearea** **fabricilor** **si** **seed-urilor**
 
-Am creat o fabrica pentru modelul Category
+Am creat o fabrica pentru modelul ```Category```
 <img src="./ar2teuuq.png"
 style="width:4.23958in;height:0.65625in" />
 
-database/factories/CategoryFactory.php
+```database/factories/CategoryFactory.php```
 <img src="./cfrrf4j4.png"
 style="width:4.125in;height:1.83333in" />
 
-Am creat o fabrica pentru modelul Task
+Am creat o fabrica pentru modelul ```Task```
 <img src="./kseu2yos.png"
 style="width:4.20833in;height:0.6875in" />
 
-database/factories/TaskFactory.php
+```database/factories/TaskFactory.php```
 <img src="./s5kwwsdi.png"
 style="width:4.21875in;height:2.125in" />
 
-Am creat o fabrica pentru modelul Tag
+Am creat o fabrica pentru modelul ```Tag```
 <img src="./0pcr44v3.png"
 style="width:3.53125in;height:0.48958in" />
 
-database/factories/TagFactory.php 
+```database/factories/TagFactory.php ```
 <img src="./v01wuhlg.png"
 style="width:3.66667in;height:1.57292in" />
 
-Am creat seed-uri pentru a popula tabelele cu date initiale pentru
-modelul Category
+Am creat seed-uri pentru a popula tabelele cu date initiale pentru modelul ```Category```
 <img src="./oh4fxa1i.png"
 style="width:4.07292in;height:0.42708in" />
 
-database/seeders/CategorySeeder.php
+```database/seeders/CategorySeeder.php```
 <img src="./xgg02a5r.png"
 style="width:4.03125in;height:1.54167in" />
 
 Am creat seed-uri pentru a popula tabelele cu date initiale pentru
-modelul Task
+modelul ```Task```
 <img src="./vy5hlsew.png" 
   style="width:4.25in;height:0.45833in" />
 
-database/seeders/TaskSeeder.php
+```database/seeders/TaskSeeder.php```
 <img src="./lah5flej.png"
 style="width:4.10417in;height:1.53125in" />
 
-Am creat seed-uri pentru a popula tabelele cu date initiale pentru modelul Tag
+Am creat seed-uri pentru a popula tabelele cu date initiale pentru modelul ```Tag```
 <img src="./hpk5xsm5.png"
 style="width:3.94792in;height:0.42708in" />
 
-database/seeders/TagSeeder.php
+```database/seeders/TagSeeder.php```
 <img src="./3fhoraox.png"
 style="width:3.88542in;height:1.44792in" />
 
-Am actulizat fisierul DatabaseSeeder.php ca sa se lanseze seed-urile
+Am actulizat fisierul ```DatabaseSeeder.php``` ca sa se lanseze seed-urile
 create
-database/seeders/DatabaseSeeder.php
+```database/seeders/DatabaseSeeder.php```
 <img src="./ojmqpbap.png"
 style="width:3.29167in;height:1.40625in" />
 
 # **Sarcina** **nr.6.** **Lucrul** **cu** **controlere** **și**
 **vizualizări**
 
-Am deschis fisierul app/Http/Controllers/TaskController.php
+Am deschis fisierul ```app/Http/Controllers/TaskController.php```
 <img src="./ta0qxxgc.png"
 style="width:3.66667in;height:2.38542in" />
 <img src="./li15hbn5.png"
@@ -213,23 +209,23 @@ selectate.
 
 Sterge o sarcina din baza de date.
 
-Am deschis fisierul resources/views/tasks/index.blade.php
+Am deschis fisierul ```resources/views/tasks/index.blade.php```
 <img src="./dbtcaddf.png"
 style="width:3.85417in;height:1.66667in" />
 
-Am deschis fisierul resources/views/tasks/show.blade.php
+Am deschis fisierul ```resources/views/tasks/show.blade.php```
 <img src="./weijpbrh.png"
 style="width:3.89583in;height:1.70833in" />
 
-Am deschis fisierul resources/views/tasks/create.blade.php
+Am deschis fisierul ```resources/views/tasks/create.blade.php```
 <img src="./co4wjm34.png"
 style="width:4.02083in;height:2.54167in" />
 
-Am deschis fisierul resources/views/tasks/edit.blade.php
+Am deschis fisierul ```resources/views/tasks/edit.blade.php```
 <img src="./ic5luull.png"
 style="width:4.16667in;height:3.20833in" />
 
-Am deschis fisierul routes/web.php
+Am deschis fisierul ```routes/web.php```
 <img src="./xaz0nqtx.png"
 style="width:4.20833in;height:1.80208in" />
 
